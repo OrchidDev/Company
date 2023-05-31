@@ -5,7 +5,7 @@
         <div class="p-3">
             <div class="d-grid gap-2">
                 <button type="button" class="btn btn-success mb-2"><i class="fa-light fa-plus"></i> بخش جدید </button>
-                <button type="button" class="btn btn-light"><i class="fa-light fa-users"></i> لیست کاربران </button>
+                <a href="{{ route('users.index') }}" type="button" class="btn btn-light"><i class="fa-light fa-users"></i> لیست کاربران </a>
             </div>
         </div>
     </div>
