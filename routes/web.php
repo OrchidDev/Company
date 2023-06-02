@@ -35,6 +35,10 @@ Route::get('/admin', [AdminController::class, 'index'])->middleware(['auth'])->n
 
 //Route::get('/admin/users', [UserController::class, 'index'])->name('users.index');
 
-Route::resource('/users', UserController::class)->except(['show']);
+
+Route::middleware(['auth', 'admin'])->prefix('/admin')->group(function (){
+    // کاربران
+    Route::resource('/users', UserController::class)->except(['show']);
+});
 
 require __DIR__.'/auth.php';
