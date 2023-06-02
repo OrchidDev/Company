@@ -22,7 +22,7 @@
                 <td>{{$row->name}}</td>
                 <td>{{$row->email}}</td>
                 <td>{{$row->getRole()}}</td>
-                <td>1402/03/11</td>
+                <td>{{$row->getCreateAtShamsi()}}</td>
                 <td>آنلاین</td>
                 <td class="text-center">
                     <a href="#" class="text-decoration-none text-dark"><i class="fa-light fa-edit"></i> </a>
