@@ -26,7 +26,8 @@
                 <td>آنلاین</td>
                 <td class="text-center">
                     <a href="{{ route('users.edit', $row->id) }}" class="text-decoration-none text-dark"><i class="fa-light fa-edit"></i> </a>
-                    <a href="#" class="text-decoration-none text-danger"><i class="fa-light fa-trash"></i> </a>
+                    <a class="text-decoration-none text-danger" onclick="event.preventDefault(); document.getElementById('trash-{{$row->id}}').submit()"><i class="fa-light fa-trash"></i> </a>
+                    <form id="trash-{{$row->id}}" action="{{ route('users.destroy', $row->id) }}" method="POST">@csrf @method('DELETE')</form>
                 </td>
             </tr>
         @endforeach
