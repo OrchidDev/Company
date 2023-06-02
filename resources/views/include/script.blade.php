@@ -15,9 +15,10 @@
     })
     toastr.options = {
         "progressBar": true,
-        "positionClass": "toast-top-left",
+        "positionClass": "toast-top-left"
     };
 </script>
+
 <script>
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
