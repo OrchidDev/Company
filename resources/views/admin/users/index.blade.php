@@ -23,7 +23,13 @@
                 <td>{{$row->email}}</td>
                 <td>{{$row->getRole()}}</td>
                 <td>{{$row->getCreateAtShamsi()}}</td>
-                <td>آنلاین</td>
+                <td class="text-center">
+                    @if(Cache::has('is_online' . $row->id))
+                        <span class="text-success"><i class="fa-light fa-circle"></i> آنلاین</span>
+                    @else
+                        <span class="text-secondary"><i class="fa-light fa-circle"></i> آفلاین</span>
+                    @endif
+                </td>
                 <td class="text-center">
                     <a href="{{ route('users.edit', $row->id) }}" class="text-decoration-none text-dark"><i class="fa-light fa-edit"></i> </a>
                     <a class="text-decoration-none text-danger" onclick="event.preventDefault(); document.getElementById('trash-{{$row->id}}').submit()"><i class="fa-light fa-trash"></i> </a>
