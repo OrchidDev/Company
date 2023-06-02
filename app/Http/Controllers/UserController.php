@@ -39,4 +39,29 @@ class UserController extends Controller
 
         return redirect()->route('users.index')->with($notification);
     }
+
+    public function edit(User $user)
+    {
+        return view('admin.users.edit', compact('user'));
+    }
+
+    public function update(Request $request, User $user)
+    {
+        $request->validate([
+            'name' => 'required|string|max:225',
+            'email' => 'required|string|email|max:225|unique:users',
+            'role' => 'required|max:225'
+        ]);
+
+        $user->update(
+            $request->only(['name', 'email', 'role'])
+        );
+
+        $notification = array(
+            'message' => 'کاربر جدید با موفقیت ویرایش شد.',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('users.index')->with($notification);
+    }
 }

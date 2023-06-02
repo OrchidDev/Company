@@ -25,7 +25,7 @@
                 <td>{{$row->getCreateAtShamsi()}}</td>
                 <td>آنلاین</td>
                 <td class="text-center">
-                    <a href="#" class="text-decoration-none text-dark"><i class="fa-light fa-edit"></i> </a>
+                    <a href="{{ route('users.edit', $row->id) }}" class="text-decoration-none text-dark"><i class="fa-light fa-edit"></i> </a>
                     <a href="#" class="text-decoration-none text-danger"><i class="fa-light fa-trash"></i> </a>
                 </td>
             </tr>
