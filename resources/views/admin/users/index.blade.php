@@ -16,11 +16,12 @@
             </tr>
         </thead>
         <tbody>
+        @foreach($users as $row)
             <tr>
-                <th scope="row">1</th>
-                <td>تست</td>
-                <td>test@gmail.com</td>
-                <td>admin</td>
+                <th scope="row">{{$row->id}}</th>
+                <td>{{$row->name}}</td>
+                <td>{{$row->email}}</td>
+                <td>{{$row->getRole()}}</td>
                 <td>1402/03/11</td>
                 <td>آنلاین</td>
                 <td class="text-center">
@@ -28,6 +29,7 @@
                     <a href="#" class="text-decoration-none text-danger"><i class="fa-light fa-trash"></i> </a>
                 </td>
             </tr>
+        @endforeach
         </tbody>
     </table>
 </x-admin-layout>
