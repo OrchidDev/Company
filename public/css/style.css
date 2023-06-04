@@ -67,3 +67,13 @@ body{
 #menu-toggle {
   margin-right: 15px;
 }
+
+.fa-telegram:hover{
+    color: #2b9ed7;
+}
+.fa-linkedin:hover{
+    color: #15487d;
+}
+.fa-instagram:hover{
+    color: #f701ae;
+ }
