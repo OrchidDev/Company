@@ -8,4 +8,5 @@
     @include('partials.faq')
     @include('partials.blog')
     @include('partials.contact')
+    @include('partials.footer')
 </x-app-layout>
