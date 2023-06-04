@@ -7,4 +7,5 @@
     @include('partials.team')
     @include('partials.faq')
     @include('partials.blog')
+    @include('partials.contact')
 </x-app-layout>
