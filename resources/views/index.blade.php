@@ -6,4 +6,5 @@
     @include('partials.pricing')
     @include('partials.team')
     @include('partials.faq')
+    @include('partials.blog')
 </x-app-layout>
