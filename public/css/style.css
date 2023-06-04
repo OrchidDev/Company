@@ -76,4 +76,8 @@ body{
 }
 .fa-instagram:hover{
     color: #f701ae;
- }
+}
+.accordion-button::after{
+    margin-right: auto;
+    margin-left: 0;
+}
