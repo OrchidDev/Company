@@ -8,6 +8,7 @@
                 @if(auth()->user()->role === 'admin')
                 <a href="{{ route('users.index') }}" type="button" class="btn btn-light"><i class="fa-light fa-users"></i> لیست کاربران </a>
                 @endif
+                <a href="{{ route('menu.index') }}" type="button" class="btn btn-light"><i class="fa-light fa-folder-tree"></i> مدیریت منو </a>
                 <div class="card text-bg-light mb-3">
                     <div class="card-header">
                         <div class="row">

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +40,7 @@ Route::get('/admin', [AdminController::class, 'index'])->middleware(['auth'])->n
 Route::middleware(['auth', 'admin'])->prefix('/admin')->group(function (){
     // کاربران
     Route::resource('/users', UserController::class)->except(['show']);
+    Route::resource('/menu', MenuController::class)->except('show');
 });
 
 require __DIR__.'/auth.php';

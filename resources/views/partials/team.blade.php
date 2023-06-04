@@ -1,4 +1,4 @@
-<section class="bg-body-secondary p-3">
+<section class="bg-body-secondary p-3" id="home">
     <div class="text-center">
         <h2 class="fw-bold mt-3 mb-3">تیم ما</h2>
 
