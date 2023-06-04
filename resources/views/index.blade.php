@@ -1,5 +1,5 @@
 <x-app-layout>
-    @include('partials.nav')
+    @include('partials.header')
     @include('partials.slider')
     @include('partials.service')
     @include('partials.features')
