@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Section extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
+    protected $fillable = [
+        'type',
+        'position'
+    ];
+
+
 }

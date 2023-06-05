@@ -20,7 +20,10 @@ class SectionController extends Controller
      */
     public function create()
     {
-        return view('admin.sections.create');
+        $section_types = ['features', 'service', 'slider', 'team', 'pricing', 'faq', 'blog'];
+        $count = Section::count();
+        $section = new Section;
+        return view('admin.sections.create', compact('section_types', 'count', 'section'));
     }
 
     /**
@@ -62,4 +65,6 @@ class SectionController extends Controller
     {
         //
     }
+
+
 }

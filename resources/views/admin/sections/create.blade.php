@@ -10,9 +10,11 @@
                         <label for="input1" class="form-label">بخش جدید</label>
                         <select id="input1" class="form-select">
                             <option selected> انتخاب کنید ... </option>
-                            <option>۱</option>
-                            <option>۲</option>
-                            <option>۳</option>
+                            @foreach ($section_types as $section_type)
+                                <option value="{{$section_type}}" @if($section_type == $section->type) selected @endif>
+                                    {{translate_section_type($section_type)}}
+                                </option>
+                            @endforeach
                         </select>
 
                     </div>
